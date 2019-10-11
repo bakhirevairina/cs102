@@ -8,7 +8,12 @@ def is_prime(num: int) -> bool:
     return True
 
 
-def g
+def gcd(a: int, b: int) -> int:
+    for i in range(a - 1, 1, -1):
+        for j in range(b - 1, i - 1, -1):
+            if i == j and a % i == 0 and b % i == 0:
+                return i
+
 
 def generate_keypair(p: int, q: int) -> ((int, int), (int, int)):
     if not (is_prime(p) and is_prime(q)):
